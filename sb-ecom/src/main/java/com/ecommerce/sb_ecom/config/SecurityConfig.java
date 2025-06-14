@@ -105,30 +105,30 @@ public class SecurityConfig {
        );
     }
 
-    @Bean
-    public UserDetailsService userDetailsService(){
-
-        return new JdbcUserDetailsManager(dataSource);
-    }
-
-    @Bean
-    public CommandLineRunner initData(UserDetailsService userDetailsService){
-
-        return args->{
-            JdbcUserDetailsManager manager = (JdbcUserDetailsManager) userDetailsService;
-            UserDetails user1 = User.withUsername("user1")
-                    .password(passwordEncoder().encode("password1"))
-                    .roles("USER")
-                    .build();
-            UserDetails admin = User.withUsername("admin")
-                    .password(passwordEncoder().encode("admin"))
-                    .roles("ADMIN")
-                    .build();
-            JdbcUserDetailsManager userDetailsManager = new JdbcUserDetailsManager(dataSource);
-            userDetailsManager.createUser(user1);
-            userDetailsManager.createUser(admin);
-        };
-    }
+//    @Bean
+//    public UserDetailsService userDetailsService(){
+//
+//        return new JdbcUserDetailsManager(dataSource);
+//    }
+//
+//    @Bean
+//    public CommandLineRunner initData(UserDetailsService userDetailsService){
+//
+//        return args->{
+//            JdbcUserDetailsManager manager = (JdbcUserDetailsManager) userDetailsService;
+//            UserDetails user1 = User.withUsername("user1")
+//                    .password(passwordEncoder().encode("password1"))
+//                    .roles("USER")
+//                    .build();
+//            UserDetails admin = User.withUsername("admin")
+//                    .password(passwordEncoder().encode("admin"))
+//                    .roles("ADMIN")
+//                    .build();
+//            JdbcUserDetailsManager userDetailsManager = new JdbcUserDetailsManager(dataSource);
+//            userDetailsManager.createUser(user1);
+//            userDetailsManager.createUser(admin);
+//        };
+//    }
 
     @Bean
     public PasswordEncoder passwordEncoder(){
