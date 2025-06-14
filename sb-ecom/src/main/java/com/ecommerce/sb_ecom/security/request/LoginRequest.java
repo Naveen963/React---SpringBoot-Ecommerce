@@ -1,4 +1,4 @@
-package com.ecommerce.sb_ecom.security.jwt;
+package com.ecommerce.sb_ecom.security.request;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;

@@ -1,4 +1,4 @@
-package com.ecommerce.sb_ecom.security.jwt;
+package com.ecommerce.sb_ecom.security.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,4 +15,10 @@ public class UserInfoResponse {
         private  String username;
         private String jwtToken;
         private List<String>roles;
+
+        public UserInfoResponse(Long id, String username, List<String> roles) {
+                this.id = id;
+                this.username = username;
+                this.roles = roles;
+        }
 }
