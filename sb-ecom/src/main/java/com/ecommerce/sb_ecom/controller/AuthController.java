@@ -149,7 +149,6 @@ public class AuthController {
         UserInfoResponse loginResponse = new UserInfoResponse(userDetails.getId(),userDetails.getUsername(),roles);
         return  ResponseEntity.ok().body(loginResponse);
 
-
     }
 
     @PostMapping("/signout")
