@@ -10,7 +10,7 @@ import com.ecommerce.sb_ecom.payload.CartItemDTO;
 import com.ecommerce.sb_ecom.payload.ProductDTO;
 import com.ecommerce.sb_ecom.repositories.CartItemRepository;
 import com.ecommerce.sb_ecom.repositories.CartRepository;
-import com.ecommerce.sb_ecom.repositories.ProductRespository;
+import com.ecommerce.sb_ecom.repositories.ProductRepository;
 import com.ecommerce.sb_ecom.util.AuthUtil;
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
@@ -28,7 +28,7 @@ public class CartServiceImplementation  implements  CartService{
     CartRepository cartRepository;
 
     @Autowired
-    ProductRespository productRepository;
+    ProductRepository productRepository;
 
     @Autowired
     CartItemRepository cartItemRepository;
